@@ -1,37 +1,51 @@
-HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+### Java ###
+*.class
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
+.idea/
 *.iml
-*.ipr
+*.iws
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+# IntelliJ's system-specific folders
+.idea_modules/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
 
-### VS Code ###
+# Gradle log files
+gradle-app.setting
+gradle-app.properties
+gradle.log
+
+# Compiled files
+bin/
+target/
+
+### Logs ###
+*.log
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Environment ###
+.env
+*.env
+
+### Database ###
+*.h2.db
+*.mv.db
+*.sqlite
+*.db
+
+### IDE config ###
 .vscode/
+*.swp
+
+### Others ###
+*.tmp
+*.bak
+*.orig
+*.rej
