@@ -2,7 +2,6 @@ package com.gary.fintechtrack.model;
 
 import lombok.Data;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 @Data
@@ -14,6 +13,10 @@ public class CryptoCoin {
     private double current_price;
     private long market_cap;
     private String image;
+
+    //Custom Fields
+    private String formattedCurrentPrice;
+    private String formattedMarketCap;
 
     //This all is to make the response of the market cap more readable
     public String getFormattedMarketCap() {

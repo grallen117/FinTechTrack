@@ -20,10 +20,10 @@ public class CryptoController {
     @GetMapping("/top")
     public List<CryptoCoin> getTopCoins(@RequestParam(defaultValue = "20") int limit) {
         List<CryptoCoin> coins = cryptoService.getTopCoins(limit);
-
+        //Add the formatted prices to the return model object
         coins.forEach(coin -> {
-            System.out.println("Formatted Market Cap: " + coin.getFormattedMarketCap());
-            System.out.println("Formatted Current Price: " + coin.getFormattedCurrentPrice());
+            coin.setFormattedMarketCap(coin.getFormattedMarketCap());
+            coin.setFormattedCurrentPrice(coin.getFormattedCurrentPrice());
         });
         return coins;
     }
